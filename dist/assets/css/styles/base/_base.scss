@@ -23,7 +23,6 @@ H1 {
 .home {
 
   height: calc(100vh - 64px);
-  max-height: 850px;
   margin: 32px;
 
 }
@@ -42,17 +41,12 @@ H1 {
     .topLeft {
 
       height: 30%;
-      background-image: url("assets/media/img/sun.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 50%;
 
     }
     .bottomLeft {
 
       flex-grow: 1;
-      margin-top: 32px;
+      margin-top: 16px;
       border: 1px solid black;
       border-radius: 32px;
       display: flex;
@@ -123,45 +117,6 @@ H1 {
 
       height: 50%;
       margin-top: 32px;
-      border-radius: 32px;
-      background-image: url("assets/media/img/card.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-
-    }
-
-  }
-
-}
-.blockRight {
-
-  grid-column-start: 5;
-  grid-column-end: 13;
-
-  h1 {
-
-    color: black;
-    font-size: 96px;
-    font-weight: 400;
-    line-height: 1.2;
-
-    span {
-
-      position: relative;
-
-     &::after {
-
-       content: "";
-       position: absolute;
-       bottom: -8px;
-       left: 0;
-       height: 8px;
-       width: 100%;
-       background: #444;
-       background: linear-gradient(90deg, rgba(255,255,255,.2) 0%, rgba(255,255,255,0.8) 5%, rgba(0,0,0,1) 100%);
-
-     }
 
     }
 
