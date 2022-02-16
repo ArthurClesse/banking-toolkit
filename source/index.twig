@@ -5,7 +5,9 @@
     <section class="home container">
         <div class="blockLeft container">
             <div class="columnLeft">
-                <div class="topLeft"></div>
+                <div class="topLeft">
+                    <div class="circle"></div>
+                </div>
                 <div class="bottomLeft">
                     <img src="assets/media/img/QR.png" alt="">
                     <h2>k76</h2>
@@ -22,7 +24,12 @@
             </div>
         </div>
         <div class="blockRight">
-            <h1>Build <span>financial</span> <br> <span>services</span> into <br> your product</h1>
+            {% include 'components/molecules/navigation.twig' %}
+            <div>
+                <h1>Build <span>financial</span> <br> <span>services</span> into <br> your product</h1>
+                <a class="cta" href="#">Get in touch</a>
+                {% include "components/molecules/cards-expanding.twig" %}
+            </div>
         </div>
     </section>
 

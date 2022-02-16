@@ -1,4 +1,5 @@
 @import "../../variables/colors";
+@import "../../variables/spacing";
 BODY {
 
   font-family: 'Roboto', sans-serif;
@@ -11,12 +12,18 @@ H1 {
   color: $primary;
 
 }
+A {
+
+  text-decoration: none;
+  color: black;
+
+}
 .container {
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 32px;
+  grid-column-gap: $spacer-32;
   grid-row-gap: 0px;
 
 }
@@ -24,7 +31,9 @@ H1 {
 
   height: calc(100vh - 64px);
   max-height: 850px;
-  margin: 32px;
+  max-width: 1800px;
+  margin: $spacer-32 auto;
+  padding: 0 $spacer-32;
 
 }
 .blockLeft {
@@ -42,28 +51,35 @@ H1 {
     .topLeft {
 
       height: 30%;
-      background-image: url("assets/media/img/sun.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 50%;
+
+      .circle {
+
+        width: 100%;
+        height: 100%;
+        background-image: url("assets/media/img/sun.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+
+      }
 
     }
     .bottomLeft {
 
       flex-grow: 1;
-      margin-top: 32px;
+      margin-top: $spacer-32;
       border: 1px solid black;
-      border-radius: 32px;
+      border-radius: $spacer-16;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 16px;
+      padding: $spacer-16;
 
       img {
 
-        width: 32px;
-        height: 32px;
+        width: $spacer-32;
+        height: $spacer-32;
 
       }
 
@@ -78,7 +94,7 @@ H1 {
       .containerGradient {
 
         display: block;
-        height: 32px;
+        height: $spacer-32;
         width: 60%;
         background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(1,0,255,1) 100%);
 
@@ -98,11 +114,11 @@ H1 {
 
       height: 50%;
       border: 1px solid black;
-      border-radius: 32px;
+      border-radius: $spacer-16;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 16px;
+      padding: $spacer-16;
 
       img {
 
@@ -122,12 +138,16 @@ H1 {
     .bottomRight {
 
       height: 50%;
-      margin-top: 32px;
-      border-radius: 32px;
+      margin-top: $spacer-32;
+      border-radius: $spacer-16;
       background-image: url("assets/media/img/card.png");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+      z-index: 1500;
+      -webkit-box-shadow: 32px 49px 60px 10px rgba(184,184,184,0.88);
+      -moz-box-shadow: 32px 49px 60px 10px rgba(184,184,184,0.88);
+      box-shadow: 32px 49px 60px 10px rgba(184,184,184,0.88);
 
     }
 
@@ -138,6 +158,9 @@ H1 {
 
   grid-column-start: 5;
   grid-column-end: 13;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   h1 {
 
@@ -145,6 +168,8 @@ H1 {
     font-size: 96px;
     font-weight: 400;
     line-height: 1.2;
+    margin-left: $spacer-32;
+    margin-bottom: 0;
 
     span {
 
@@ -164,6 +189,18 @@ H1 {
      }
 
     }
+
+  }
+
+  .cta {
+
+    display: inline-block;
+    margin-top: $spacer-32;
+    padding: 20px $spacer-32;
+    margin-left: $spacer-32;
+    color: white;
+    background-color: black;
+    font-weight: 300;
 
   }
 

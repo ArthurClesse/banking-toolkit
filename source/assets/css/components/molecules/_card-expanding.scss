@@ -1,0 +1,140 @@
+.card {
+
+  &__container {
+
+    display: flex;
+    margin-top: 48px;
+    position: relative;
+    height: 173px;
+    width: 70%;
+
+  }
+
+  background-color: #E3E3E3;
+  border-radius: $spacer-16;
+  position: absolute;
+  height: 100%;
+  border: 1px solid #E3E3E3;
+  overflow: hidden;
+  transition: width .3s ease-out;
+  width: 142px;
+
+  &__block {
+
+    padding: $spacer-32;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    transition: transform .3s ease-out;
+
+  }
+  &__number {
+
+    span {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      font-size: 28px;
+      font-weight: 400;
+      background-color: black;
+      color: white;
+
+    }
+
+  }
+  &__content {
+
+    margin-left: $spacer-16;
+    display: none;
+
+    h3 {
+
+      font-size: 24px;
+      font-weight: 400;
+      margin: 0;
+      margin-top: $spacer-16;
+
+    }
+    p {
+
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.5;
+
+    }
+
+  }
+  &.one {
+
+    z-index: 150;
+
+    .card__block {
+
+      justify-content: flex-start;
+
+    }
+
+  }
+
+  &.two {
+
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    right: 122px;
+    z-index: 100;
+    transition: all .3s ease-out;
+
+    .card__number {
+
+      span {
+
+        background-color: white;
+        color: black;
+
+      }
+
+    }
+
+  }
+  &.three {
+
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    right: 0;
+
+    .card__number {
+
+      span {
+
+        background-color: #E3E3E3;
+        color: black;
+
+      }
+
+    }
+
+  }
+  &.active {
+
+    width: calc(100% - 244px);
+
+    .card__content {
+
+      display: block;
+
+    }
+    .card__block {
+
+      justify-content: flex-start;
+
+    }
+
+  }
+
+}
